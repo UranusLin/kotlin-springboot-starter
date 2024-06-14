@@ -172,3 +172,13 @@ Contributions are welcome! Please feel free to submit a PR or open an issue.
 ### License
 This project is licensed under the MIT License.
 
+### TODO
+- [ ] Add Swagger
+- [ ] Add JWT
+- [ ] Add Logging
+- [ ] Add environment variables
+- [ ] Add Exception Handling
+- [ ] Add Integration Tests
+- [ ] Add CI/CD Pipeline
+- [ ] Add more features
+
