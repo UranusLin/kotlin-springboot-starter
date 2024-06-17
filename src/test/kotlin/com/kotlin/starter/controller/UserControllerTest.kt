@@ -1,6 +1,6 @@
 package com.kotlin.starter.controller
 
-import com.kotlin.starter.config.TestSecurityConfig
+import com.kotlin.starter.config.SecurityConfig
 import com.kotlin.starter.model.User
 import com.kotlin.starter.service.UserService
 import org.junit.jupiter.api.Test
@@ -16,7 +16,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 
 @WebMvcTest(UserController::class)
 @ActiveProfiles("test")
-@Import(TestSecurityConfig::class)
+@Import(SecurityConfig::class)
 class UserControllerTest(
     @Autowired val mockMvc: MockMvc,
 ) {
@@ -29,7 +29,7 @@ class UserControllerTest(
         Mockito.`when`(userService.getAllUsers()).thenReturn(users)
 
         mockMvc
-            .perform(MockMvcRequestBuilders.get("/api/users"))
+            .perform(MockMvcRequestBuilders.get("/v1/api/users"))
             .andExpect(MockMvcResultMatchers.status().isOk)
             .andExpect(MockMvcResultMatchers.jsonPath("$.length()").value(users.size))
     }

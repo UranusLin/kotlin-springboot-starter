@@ -61,8 +61,6 @@ This repository serves as a starter template for building applications with Kotl
 ```css
 kotlin-springboot-starter/
 ├── build.gradle.kts
-├── docker-compose.yml
-├── Dockerfile
 ├── Makefile
 ├── src/
 │   ├── main/
@@ -83,13 +81,16 @@ kotlin-springboot-starter/
 │   │   │           │   └── SecurityConfig.kt
 │   │   │           └── KotlinSpringbootStarterApplication.kt
 │   │   ├── resources/
-│   │       ├── db/
-│   │       │   └── migration/
-│   │       │       └── V1__Initial_schema.sql
-│   │       ├── static/
-│   │       ├── templates/
-│   │       ├── application.yml
-│   │       └── application-dev.yml
+│   │   │   ├── db/
+│   │   │   │   └── migration/
+│   │   │   │       └── V1__Initial_schema.sql
+│   │   │   ├── static/
+│   │   │   ├── templates/
+│   │   │   ├── application.yml
+│   │   │   └── application-dev.yml
+│   │   │── docker/
+│   │   │   └── Dockerfile
+│   │   │   └── docker-compose.yml
 │   └── test/
 │       ├── kotlin/
 │       │   └── com/
@@ -166,6 +167,11 @@ To apply migrations, run:
 make migrate
 ```
 
+#### Swagger
+Swagger UI is available at `http://localhost:8080/swagger-ui/index.html#/`
+![](./docs/imgs/Swagger_page.png)
+
+
 ### Contributing
 Contributions are welcome! Please feel free to submit a PR or open an issue.
 
@@ -173,7 +179,7 @@ Contributions are welcome! Please feel free to submit a PR or open an issue.
 This project is licensed under the MIT License.
 
 ### TODO
-- [ ] Add Swagger
+- [x] Add Swagger
 - [ ] Add JWT
 - [ ] Add Logging
 - [ ] Add environment variables

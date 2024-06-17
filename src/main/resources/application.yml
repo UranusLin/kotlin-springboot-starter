@@ -1,4 +1,6 @@
 spring:
+  main:
+    allow-bean-definition-overriding: true
   datasource:
     url: jdbc:postgresql://db:5432/springboot_starter
     username: your_db_username
@@ -12,3 +14,10 @@ spring:
     enabled: true
     locations: classpath:db/migration
     baseline-on-migrate: true
+springdoc:
+  api-docs:
+    path: /v1/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: alpha
+    defaultModelsExpandDepth: -1
